@@ -1,5 +1,6 @@
 # DATA ENGINEERING CAPSTONE PROJECT 
 
+![img/logo.png]
 Ford GoBike
 
 **What is Ford GoBike?**
