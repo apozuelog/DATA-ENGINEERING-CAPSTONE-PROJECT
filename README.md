@@ -29,7 +29,7 @@ Creamos dataset con los registros para cada tabla.
 
 This first dataset has more than 2.7 million records in 16 columns and includes records from 2018-01-01 to 2019-09-30.
 Este es el schema:  
-**STAGING**
+**STAGING**  
 ![schema](img/staging_schema.PNG)  
 **DIM TABLES**  
 ![schema](img/time_table_schema.PNG)  
