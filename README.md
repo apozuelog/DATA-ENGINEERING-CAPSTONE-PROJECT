@@ -29,9 +29,10 @@ Creamos dataset con los registros para cada tabla.
 
 This first dataset has more than 2.7 million records in 16 columns and includes records from 2018-01-01 to 2019-09-30.
 Este es el schema:  
-`# Number of records and schema
+`# Number of records and schema  
 print(df.count())
-df.printSchema()`
+df.printSchema()`  
+![schema](img/schema.PNG)
 
 
 #### Step 3: Define the Data Model
