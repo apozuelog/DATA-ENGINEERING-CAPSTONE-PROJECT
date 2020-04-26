@@ -19,13 +19,20 @@ The bikes are available for use 24 hours/day, 7 days/week, 365 days/year and rid
 El scoop de este proyecto es realizar un proceso de carga de datos en bruto en nuestro Data Lake en AWS S3, análisis y limpieza de datos, diseño de BBDD en AWS Redshift y creación del proceso ETL con AirFlow para guardar los registros en las distintas tablas.
 
 ##### AWS S3
-En nuestro S3 tenemos una serie de csv con la información que generan las bicicletas compartidas GoBike.
-Total size: 558.4 MB in 16 objects
-
-This first dataset has more than 2.7 million records in 16 columns and includes records from 2018-01-01 to 2019-09-30.
-
+En nuestro S3 tenemos una serie de csv con la información que generan las bicicletas compartidas GoBike.  
+Total size: 558.4 MB in 16 objects.
 
 #### Step 2: Explore and Assess the Data
+**bikes_trips.py**  
+Ejecutando este archivo, creamos una **SparkSession** para cargar, analizar, limpiar y postariormente guardar en archivo parquet (no se ha implementado porque los tiempos de carga son muy altos).  
+Creamos dataset con los registros para cada tabla.
+
+This first dataset has more than 2.7 million records in 16 columns and includes records from 2018-01-01 to 2019-09-30.
+Este es el schema:  
+`# Number of records and schema
+print(df.count())
+df.printSchema()`
+
 
 #### Step 3: Define the Data Model
 
