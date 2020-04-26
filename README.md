@@ -14,23 +14,25 @@ Ford GoBike, like other bike share systems, consists of a fleet of specially des
 The bikes are available for use 24 hours/day, 7 days/week, 365 days/year and riders have access to all bikes in the network when they become a member or purchase a pass.
 
 
-#### Step 1: Scope the Project and Gather Data  
+### Step 1: Scope the Project and Gather Data  
 
 El scoop de este proyecto es realizar un proceso de carga de datos en bruto en nuestro Data Lake en AWS S3, análisis y limpieza de datos, diseño de BBDD en AWS Redshift y creación del proceso ETL con AirFlow para guardar los registros en las distintas tablas.
 
-##### AWS S3
+#### AWS S3
 En nuestro S3 tenemos una serie de csv con la información que generan las bicicletas compartidas GoBike.  
 Total size: 558.4 MB in 16 objects.
 
-#### Step 2: Explore and Assess the Data
+### Step 2: Explore and Assess the Data
 **bikes_trips.py**  
 Ejecutando este archivo, creamos una **SparkSession** para cargar, analizar, limpiar y posteriormente guardar en archivo parquet (no se ha implementado porque los tiempos de carga son muy altos).  
 Creamos dataset con los registros para cada tabla.
 
 This first dataset has more than 2.7 million records in 16 columns and includes records from 2018-01-01 to 2019-09-30.
-Este es el schema:  
+Este es el schema:   
+
 **STAGING**  
 ![schema](img/staging_schema.PNG)  
+
 **DIM TABLES**  
 ![schema](img/time_table_schema.PNG)  
 ![schema](img/station_table_schema.PNG)  
@@ -40,9 +42,22 @@ Este es el schema:
 **FACT TABLE**  
 ![schema](img/bike_trips_table_schema.PNG)
 
+### Step 3: Define the Data Model
+El modelo es una bbdd en estrella con 4 tablas de dimensiones, una de hechos y staging
+**aquí imagen en estrella**
 
-#### Step 3: Define the Data Model
+### Step 4: Run ETL to Model the Data  
+![schema](img/graph_execution.PNG)
 
-#### Step 4: Run ETL to Model the Data
+### Step 5: Complete Project Write Up  
+**Tiempos de carga**  
+Aquí Texto  
+![schema](img/gant_execution.PNG)  
 
-#### Step 5: Complete Project Write Up
+**Todos los task OK!!**  
+Aquí Texto  
+![schema](img/tree_view.PNG)  
+
+### EXTRA BONUS  
+**Quicksight dashboard**  
+![schema](img/quicksight.PNG) 
