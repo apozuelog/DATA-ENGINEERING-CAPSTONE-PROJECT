@@ -14,7 +14,13 @@ Ford GoBike, like other bike share systems, consists of a fleet of specially des
 The bikes are available for use 24 hours/day, 7 days/week, 365 days/year and riders have access to all bikes in the network when they become a member or purchase a pass.
 
 
-#### Step 1: Scope the Project and Gather Data
+#### Step 1: Scope the Project and Gather Data  
+
+El scoop de este proyecto es realizar un proceso de carga de datos en bruto en nuestro Data Lake en AWS S3, análisis y limpieza de datos, diseño de BBDD en AWS Redshift y creación del proceso ETL con AirFlow para guardar los registros en las distintas tablas.
+
+##### AWS S3
+En nuestro S3 tenemos una serie de csv con la información que generan las bicicletas compartidas GoBike.
+Total size: 558.4 MB in 16 objects
 
 This first dataset has more than 2.7 million records in 16 columns and includes records from 2018-01-01 to 2019-09-30.
 
