@@ -1,4 +1,5 @@
-<img src="img/logo.PNG" alt="Logo"/>  
+  
+<img src="img/logo.png" alt="Logo" style="width: 200px;"/>
 
 # A Data Engineer project.  
 
@@ -9,7 +10,7 @@ Ford GoBike is the Bay Area's bike share system. Bay Area Bike Share was introdu
 
 Ford GoBike, like other bike share systems, consists of a fleet of specially designed, sturdy and durable bikes that are locked into a network of docking stations throughout the city. The bikes can be unlocked from one station and returned to any other station in the system, making them ideal for one-way trips. People use bike share to commute to work or school, run errands, get to appointments or social engagements and more. It's a fun, convenient and affordable way to get around.
 
-![maph](img/bici.jpg)
+![bici](img/bici.jpg)
 
 The bikes are available for use 24 hours/day, 7 days/week, 365 days/year and riders have access to all bikes in the network when they become a member or purchase a pass.
 
