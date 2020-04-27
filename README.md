@@ -27,6 +27,7 @@ Steps:
 3. Definition of the data model
 4. Create dimension tables and fact tables in Redshift
 5. Development in Airflow of the necessary operators to load data in our Redshift model  
+6. Forecast. HDFS  
 
 <img src="img/aws_achitecture.PNG" alt="GoBike architecture"/>
 
@@ -87,3 +88,28 @@ The result is as follows:
 
 **All task OK!!**  
 ![schema](img/tree_view.PNG)  
+
+
+#### 6. Forecast.  HDFS
+To anticipate hyperpotential scenarios in which the volume of data doubles or triples, a change in the project architecture is planned.
+
+**HDFS architecture**
+The strengths of Hadoop architecture
+Hadoop's architecture allows for effective analysis of unstructured big data, adding value that can help you make strategic decisions, improve production processes, save costs, track what your customers think, or draw conclusions scientific, say.
+
+Its scalable technology makes it possible, its speed (not in real time, at least not without help, like the one provided by Spark), flexibility, among other strengths. If we have to point out its five main advantages, they would be the following:
+
+Highly scalable technology: A Hadoop cluster can grow simply by adding new nodes. It is not necessary to make adjustments that modify the initial structure. Therefore, it allows us easy growth, without being tied to the initial characteristics of the design, making use of dozens of low-cost servers that, unlike the relational database, cannot scale. Thanks to MapReduce's distributed processing, files are easily divided into blocks.
+
+Low-cost storage: Information is not stored by default, in rows and columns, as is the case with traditional databases, but Hadoop assigns categorized data through thousands of cheap computers, and this is a great saving. Only then does it become feasible. Otherwise, we would not be able to work with large volumes of data, since the cost would be extremely high, unaffordable for the vast majority of companies.
+
+Flexibility: By increasing the number of system nodes we also gain in storage and processing capacity. In turn, it is possible to add or access new and different data sources (structured, semi-structured and unstructured), while there is the possibility of adapting accessory tools that work in the Hadoop environment and help in the design of processes, integration or improve other aspects.
+
+Speed: Low cost, scalability and flexibility will be of little use to us if the result is not reasonably fast. Fortunately, Hadoop also allows for very fast processing and analysis.
+
+Fault tolerant: Hadoop is a technology that makes it easy to store large volumes of information, which in turn allows you to retrieve data safely. If a computer goes down, another copy is always available, making data recovery possible in the event of a crash.
+
+Como posible solución existe AWS EMR y Spark 2 usando Scala. 
+
+**Dado que en este momento no es el caso, la solución aportada es la mejor.**
+
