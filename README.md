@@ -24,10 +24,9 @@ In principle, a large number of users is not expected for the exploitation of th
 Steps:
 1. Raw storage of files (in our case CSV) in AWS S3.
 2. Exploratory analysis and data wrangling with Spark
-3. Clustering and output of data in Parquet format
-4. Definition of the data model
-5. Create dimension tables and fact tables in Redshift
-6. Development in Airflow of the necessary operators to load data in our Redshift model  
+3. Definition of the data model
+4. Create dimension tables and fact tables in Redshift
+5. Development in Airflow of the necessary operators to load data in our Redshift model  
 
 <img src="img/aws_achitecture.PNG" alt="GoBike architecture"/>
 
@@ -41,6 +40,7 @@ Despues de una primera lectura de todos los archivos CSV alojados en AWS S3, obt
 **STAGING TRIPS**  
 ![schema](img/staging_schema.PNG)  
 
+#### 3. Definition of the data model
 Examinando el schema determino que la mejor arquitectura para la explotación de estos es desarrollar una BB.DD. en estrella con tablas de dimensiones y tablas de hechos. De este modo podremos dar respuesta a las siguientes cuestiones:  
 * The times of the journeys
 * From where and where with geolocation
@@ -51,6 +51,10 @@ In addition columns of year, week, month, day and hour have been added for a bet
 **Bike Trips star data model**  
 <img src="img/model.PNG" alt="GoBike star model" style="width:400px;"/>  
 
+
+#### 4. Create dimension tables and fact tables in Redshift
+In the file ** create_tables.sql ** there are all the queries necessary to create the tables in Redshift.
+The result is as follows:
 **DIM TABLES**  
 <table class="">
   <tr>
@@ -67,16 +71,15 @@ In addition columns of year, week, month, day and hour have been added for a bet
 ![schema](img/bike_trips_table_schema.PNG)
 
 
-### Step 4: Run ETL to Model the Data  
-
+#### 5. Development in Airflow of the necessary operators to load data in our Redshift model 
+**OPERATORS**  
 * **StageToRedshiftOperator**
 * **LoadDimensionOperator**
 * **LoadFactOperator**
 * **DataQualityOperator**  
 
-![schema](img/graph_execution.PNG)
+![schema](img/graph_execution.PNG)  
 
-### Step 5: Complete Project Write Up  
 **Tiempos de carga**  
 Aquí Texto  
 ![schema](img/gant_execution.PNG)  
@@ -84,7 +87,3 @@ Aquí Texto
 **Todos los task OK!!**  
 Aquí Texto  
 ![schema](img/tree_view.PNG)  
-
-### EXTRA BONUS  
-**Quicksight dashboard**  
-![schema](img/quicksight.PNG) 
