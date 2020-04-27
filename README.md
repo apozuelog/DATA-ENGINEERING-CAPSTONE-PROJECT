@@ -109,7 +109,7 @@ Speed: Low cost, scalability and flexibility will be of little use to us if the 
 
 Fault tolerant: Hadoop is a technology that makes it easy to store large volumes of information, which in turn allows you to retrieve data safely. If a computer goes down, another copy is always available, making data recovery possible in the event of a crash.
 
-Como posible solución existe AWS EMR y Spark 2 usando Scala. 
+As a possible solution there is AWS EMR and Spark 2 using Scala.
 
-**Dado que en este momento no es el caso, la solución aportada es la mejor.**
+**Since this is not the case at the moment, the solution provided is the best.**
 
