@@ -1,5 +1,4 @@
-![logo](img/logo.png)  
-
+<img src="img/logo.PNG" alt="Maph" style="width: 400px;"/>  
 
 # A Data Engineer project.  
 
