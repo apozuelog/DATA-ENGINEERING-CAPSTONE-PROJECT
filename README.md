@@ -30,15 +30,18 @@ Steps:
 
 <img src="img/aws_achitecture.PNG" alt="GoBike architecture"/>
 
+
 #### 1. Raw storage of files in AWS S3
 En nuestro S3 tenemos una serie de csv con la información que generan las bicicletas compartidas GoBike.  
 Total size: 558.4 MB in 16 objects.
+
 
 #### 2. Exploratory analysis with PySpark
 Mediante el Jupyter Noetbook **bikes_SparkSession.ipynb**, realizo las tareas necesarias para realizar el análisis exploratorio de los datos, la limpieza y desarrollo  del script para exportar a Parquet los resultados obtenidos.  
 Despues de una primera lectura de todos los archivos CSV alojados en AWS S3, obtenemos un dataset con more than 2.7 million records in 16 columns and includes records from 2018-01-01 to 2019-09-30.  
 **STAGING TRIPS**  
 ![schema](img/staging_schema.PNG)  
+
 
 #### 3. Definition of the data model
 Examinando el schema determino que la mejor arquitectura para la explotación de estos es desarrollar una BB.DD. en estrella con tablas de dimensiones y tablas de hechos. De este modo podremos dar respuesta a las siguientes cuestiones:  
@@ -77,13 +80,10 @@ The result is as follows:
 * **LoadDimensionOperator**
 * **LoadFactOperator**
 * **DataQualityOperator**  
-
 ![schema](img/graph_execution.PNG)  
 
-**Tiempos de carga**  
-Aquí Texto  
+**Charging times**  
 ![schema](img/gant_execution.PNG)  
 
-**Todos los task OK!!**  
-Aquí Texto  
+**All task OK!!**  
 ![schema](img/tree_view.PNG)  
